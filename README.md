@@ -19,24 +19,25 @@ $ echo $PATH
 ```
 
 - Make pico the default editor
+```
+touch ~/.bash_profile
+pico ~/.bash_profile
+```
 
+edit it to include the following:
+```
+export EDITOR=pico
+export VISUAL="$EDITOR"
+```
 - Set up Github and SSH keys
 
 - Install Python via Homebrew so we are not using system Python
 ```
 brew install python
 ```
-Link to it in `.bashrc
-```
-pico .bashrc
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
-```
-
-Open a new terminal window to make sure the `.bashrc` settings take effect
-
-Double check that the right version of python is being used:
+Check that we are defaulting to the homebrew version rather than the system python:
 ```
 which python3
+which pip3
 ```
-which should point at `python3: aliased to /usr/local/bin/python3
+which should point at `/opt/homebrew/bin/python3` and `/opt/homebrew/bin/pip3`, respectively
