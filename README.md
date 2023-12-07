@@ -41,3 +41,7 @@ which python3
 which pip3
 ```
 which should point at `/opt/homebrew/bin/python3` and `/opt/homebrew/bin/pip3`, respectively
+
+Let's make sure our Python is up to date
+```brew upgrade python3
+```
